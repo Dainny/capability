@@ -1,0 +1,215 @@
+page-home {
+    @keyframes scale{
+        0%{
+            -webkit-transform: scale(1);
+        }
+        50%{
+            -webkit-transform: scale(1.2);
+        }
+        100%{
+            -webkit-transform: scale(1);
+        }
+    }
+    @-webkit-keyframes scale{
+        0%{
+            -webkit-transform: scale(1);
+        }
+        50%{
+            -webkit-transform: scale(1.2);
+        }
+        100%{
+            -webkit-transform: scale(1);
+        }
+    }
+    
+    .searchBar{
+        width:100%;
+        top:1.2rem;
+        display:flex;
+        justify-content:space-between;;
+        align-items:center;
+        padding:0 15px;
+        button{
+            margin:0px;
+            padding:0px;
+        }
+        .avatarButton{
+            flex:0 0 auto;
+            order:0;
+            img{
+                width:3.3rem;
+                height:3.3rem;
+                border-radius:50%;
+            }
+        }
+        .searchbarButton{
+            flex:0 1 auto;
+            flex-basis: 85%;
+            // margin-left:1.4rem;
+            background-image: url(../assets/img/searchIcon@2x.png);
+            background-repeat: no-repeat;
+            background-size:auto 1.9rem;
+            background-position: right .6rem center;
+            height:3.3rem;
+            border-radius:1.5rem;
+            transition: flex-basis .3s;
+            // flex-basis:3.2rem;
+            &.shortSearchbar{
+                flex-basis:3.4rem;
+            }
+            &.activated{
+                opacity: .7;
+            }
+            &>span{
+                opacity: .3;
+                background-color:white ;
+            }
+        }
+        // .searchBarContent{
+        //     position:relative;
+        //     width:90%;
+            // .searchBarAvator{
+
+            //     background:red;
+            //     height:40px;
+            //     width:40px;
+            // }
+            // .searchBarTextBox{
+                
+            // }
+            // .item-ios{
+            //     background:transparent;
+            //     .item-ios ion-avatar[item-left]{
+            //     margin-top:0px;
+            //     margin-bottom:0px;
+            //     }
+            //     .item-inner{
+            //         border-bottom:0px;
+            //         .button-ios{
+            //             width:80%;height:60%;opacity:.5;
+            //             background-color: #FFF;
+            //             &.activated{
+            //                 opacity:.7;
+            //             }
+            //         }
+
+            //     }
+            // }
+            
+        // }
+    }
+    .bannerSlides{
+        height:auto;
+        background-color: #FFFFFF;
+        .swiper-pagination-bullet{
+            background:white; 
+            opacity: .4; 
+        }
+        .swiper-pagination-bullet-active{
+            width:16px;
+            opacity: .9;
+            border-radius: 5px;
+        }
+        img{
+            display: block;
+        }
+    }
+
+    #hot{
+        width: 100%;
+        padding:20px 7.5px;
+        display:flex;
+        justify-content:center;
+        background: #FFF;
+        flex-direction: row;
+        & > a{
+            margin:0 7.5px;
+            &>img{
+                // border:.55px solid #D2BC90;
+                // border-radius:.6rem;
+            }
+        }
+    }
+
+    #specialSelected{
+        background:#FFF;
+        margin-top:15px;
+        .selectedHeader{
+            line-height: 50px;
+            .selectedHeaderContent{
+                text-align: center;
+                background:url(../assets/img/homeThemebg@2x.png) center no-repeat; 
+                background-size:70% auto;
+                h3{
+                    display: inline-block;
+                    color:#3F2B07;
+                    font-weight:400;
+                    height:20px;
+                    line-height: 20px;
+                    padding:0 5px;
+                    font-size:1.4rem;
+                    background-color: #FFF;
+                }
+            }
+            
+        }
+        .selectedContent{
+            overflow: hidden;
+            // margin-bottom: 3rem;
+            .selectedContentItem{
+                margin-bottom:15px;
+                .selectedContentItemBanner{
+                    width:100%;
+                    overflow:hidden;
+                    img{
+                        animation:scale 25s ease-in-out infinite;
+                        display: block;
+                    }
+                }
+                .selectedContentItemSlides{
+                    padding: 10px 0 0;
+                    position: relative;
+                    clear: both;
+                    .swiper-wrapper{
+                        margin-left: 5px;
+                    }
+                    .swiper-slide{
+                        display: inline-block;
+                    }
+                    .slide-zoom{
+                        width:auto;
+                        border: 1px solid #F3F3F3;
+                        margin: 0 5px 1px;
+                        
+                        .selectedContentItemSlidesItem{
+                            img{
+                                display: block;
+                            }
+                            .selectedContentItemSlidesItemDetail{
+                                padding: 3px;
+                                p.detail1{
+                                    color:#333;
+                                    line-height: 2rem;
+                                    font-size:1.1rem;
+                                    overflow:hidden;
+                                    white-space: nowrap;
+                                    text-overflow: ellipsis;
+                                }
+                                p.detail2{
+                                    font-size:1.1rem;
+                                    color:#B39568;
+                                    overflow:hidden;
+                                    white-space: nowrap;
+                                    text-overflow: ellipsis;
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+
+
+}
